@@ -1,5 +1,5 @@
 # Deployment doesn't work on Alpine
-FROM php:7.2-cli AS deployer
+FROM php:5.5-cli AS deployer
 ENV OSTICKET_VERSION=1.10
 RUN set -x \
     && apt-get update \
@@ -14,7 +14,7 @@ RUN set -x \
     && chown -R root:root /data/upload/setup_hidden \
     && chmod -R go= /data/upload/setup_hidden
 
-FROM php:7.2-fpm-alpine
+FROM php:5.5-fpm-alpine
 MAINTAINER Martin Campbell <martin@campbellsoftware.co.uk>
 # environment for osticket
 ENV HOME=/data
