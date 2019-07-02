@@ -14,7 +14,7 @@ RUN set -x \
     && chown -R root:root /data/upload/setup_hidden \
     && chmod -R go= /data/upload/setup_hidden
 
-FROM php:5.5-fpm-alpine
+FROM php:5.5.19-fpm-alpine
 MAINTAINER Martin Campbell <martin@campbellsoftware.co.uk>
 # environment for osticket
 ENV HOME=/data
